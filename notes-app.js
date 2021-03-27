@@ -12,8 +12,9 @@ document.querySelector('#new').addEventListener('click', function(e) {
         title:'',
         body:''
     })
+
     saveNotes(notes)
-    renderNotes(notes, filters)
+    location.assign('/edit.html')
 })
 
 document.querySelector('#search-text').addEventListener('input', function(e) {
