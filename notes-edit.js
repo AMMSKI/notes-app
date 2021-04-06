@@ -16,7 +16,7 @@ titleElement.value = note.title
 bodyElement.value = note.body
 
 bodyElement.addEventListener('input',function(e){
-    body.title = e.target.value
+    note.body = e.target.value
     saveNotes(notes)
 })
 
@@ -27,7 +27,6 @@ titleElement.addEventListener('input',function(e){
 
 removeElement.addEventListener('click',function(e){
     removeNote(note.id)
-
     saveNotes(notes)
     location.assign('/index.html')
 })
