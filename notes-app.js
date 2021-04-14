@@ -8,10 +8,15 @@ renderNotes(notes,filters)
 
 document.querySelector('#new').addEventListener('click', function(e) {
     const id = uuidv4()
+
+    const timeStamp = moment().valueOf()
+
     notes.push({
         id: id,
         title:'',
-        body:''
+        body:'',
+        createdAt: timeStamp,
+        updatedAt: timeStamp
     })
 
     saveNotes(notes)
@@ -34,10 +39,3 @@ window.addEventListener('storage', function(e){
     }
 })
 
-const now = moment()
-//now.subtract(1, 'year').subtract(43, 'minutes')
-console.log(now.toString())
-console.log(now.format('MMMM Do, YYYY'))
-console.log(now.fromNow())
-const nowTimeStamp = now.valueOf()
-console.log(moment(nowTimeStamp).toString())
