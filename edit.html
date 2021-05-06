@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <body>
-            <a href="index.html">Done Editing</a>
-            <input id="note-title" placeholder="Note Title">
-            <span id="last-edited"></span>
-            <textarea id="note-body" placeholder="Note Text Here"></textarea>
-            <button id="remove-note">Remove Note</button>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
-            <script src="notes-functions.js"></script>
-            <script src="notes-edit.js"></script>
-        </body>
+        <link href="styles/styles.css" rel="stylesheet">
     </head>
+        <body>
+            <div class="header">
+                <div class="container">
+                    <h1 class="header__title">Notes App</h1>
+                    <h2 class="header__subtitle">Take notes and get shit done</h2>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="actions__container actions__container--spaced">
+                    <a class="a__homelink" href="index.html">Save Note</a>
+                    <span id="last-edited"></span>
+                </div>
+            </div>
+            <div class="container">
+                <input id="note-title" class="title-input" placeholder="Note Title">
+                <textarea id="note-body" class="body-input" placeholder="Note Text Here"></textarea>
+                <button id="remove-note" class="button button--secondary">Remove Note</button>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+            <script src="/scripts/notes-functions.js"></script>
+            <script src="/scripts/notes-edit.js"></script>
+        </body>
 </html>
